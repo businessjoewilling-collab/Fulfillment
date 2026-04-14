@@ -186,8 +186,11 @@
       .fgrid { grid-template-columns: 1fr; }
       .fg.full { grid-column: 1; }
       .nav-right a:not(.pill) { display: none; }
-      .trust-section { grid-template-columns: 1fr; padding: 32px 24px; gap: 32px; }
-      .trust-photo, .trust-photo-placeholder { width: 100%; height: 220px; }
+      .trust-section { grid-template-columns: 1fr; padding: 32px 24px; gap: 24px; text-align: center; }
+      .trust-photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center top; margin: 0 auto; }
+      .trust-photo-placeholder { width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; }
+      .trust-right blockquote { font-size: 1rem; }
+      .trust-right { text-align: left; }
     }
 
     @keyframes up { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
