@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3PL Fulfillment Partner finden – DACH | Fulfillbridge</title>
+  <meta name="description" content="Du suchst einen passenden Fulfillment-Partner für deinen D2C-Shop in Deutschland, Österreich oder der Schweiz? Fulfillbridge vermittelt dich schnell und unkompliziert an geprüfte 3PL-Anbieter im DACH-Raum." />
+  <meta name="keywords" content="3PL finden Deutschland, Fulfillment Partner D2C, Fulfillment Anbieter DACH, 3PL Vergleich, Fulfillment für Shopify, Lagerlogistik D2C, Fulfillment Österreich Schweiz" />
+  <link rel="canonical" href="https://fulfillbridge.de/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fulfillbridge.de/" />
+  <meta property="og:title" content="3PL Fulfillment Partner finden – DACH | Fulfillbridge" />
+  <meta property="og:description" content="Wir vermitteln D2C-Shops in DACH schnell und unkompliziert an passende 3PL-Fulfillment-Partner." />
+  <meta property="og:locale" content="de_DE" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="3PL Fulfillment Partner finden – DACH | Fulfillbridge" />
+  <meta name="twitter:description" content="Wir vermitteln D2C-Shops in DACH schnell und unkompliziert an passende 3PL-Fulfillment-Partner." />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"Fulfillbridge","description":"Fulfillbridge vermittelt D2C-Shops in DACH an passende 3PL-Fulfillment-Partner.","url":"https://fulfillbridge.de","areaServed":["DE","AT","CH"],"serviceType":"3PL Fulfillment Vermittlung","sameAs":["https://www.linkedin.com/in/fulfillbridge-dach-8832b03a8"]}
+  </script>
+
+  <!-- ✅ Schrift: Lesbare, moderne Kombination – Inter für Body, Manrope für Headlines -->
+  <!-- Vercel Speed Insights -->
+  <script defer src="/_vercel/insights/script.js"></script>
+  <!-- Vercel Web Analytics -->
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:      #08080d;
+      --surface: #0f0f16;
+      --card:    #13131c;
+      --border:  #22222e;
+      --accent:  #5bffc8;
+      --accent2: #3de0a8;
+      --text:    #c8c8e0;
+      --muted:   #6b6b8a;
+      --soft:    #9494b8;
+      --white:   #f0f0fa;
+      --fh: 'Manrope', sans-serif;
+      --fb: 'Inter', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--fb); font-size: 16px; line-height: 1.75; overflow-x: hidden; }
+
+    body::after {
+      content: ''; position: fixed; inset: 0;
+      background-image: linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 64px 64px; pointer-events: none; z-index: 0;
+    }
+    .glow { position: fixed; top: -400px; left: 50%; transform: translateX(-50%); width: 1000px; height: 1000px; background: radial-gradient(ellipse, rgba(91,255,200,0.04) 0%, transparent 65%); pointer-events: none; z-index: 0; }
+
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 1; }
+
+    /* ── NAV ── */
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(8,8,13,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; max-width: 1040px; margin: 0 auto; padding: 0 28px; }
+    .logo { font-family: var(--fh); font-weight: 800; font-size: 1.1rem; color: var(--white); text-decoration: none; letter-spacing: -0.01em; }
+    .logo span { color: var(--accent); }
+    .nav-right { display: flex; align-items: center; gap: 28px; }
+    .nav-right a { color: var(--muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+    .nav-right a:hover { color: var(--soft); }
+    .nav-right .pill { background: var(--accent); color: #08080d !important; padding: 7px 18px; border-radius: 6px; font-weight: 700 !important; font-size: 0.82rem !important; transition: background 0.2s, transform 0.15s !important; }
+    .nav-right .pill:hover { background: var(--accent2) !important; transform: translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; padding: 88px 0 80px; }
+    .chip { display: inline-flex; align-items: center; background: rgba(91,255,200,0.07); border: 1px solid rgba(91,255,200,0.15); color: var(--accent); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; padding: 5px 13px; border-radius: 100px; margin-bottom: 28px; }
+    h1 { font-family: var(--fh); font-size: clamp(1.9rem, 3.4vw, 2.9rem); font-weight: 800; line-height: 1.12; letter-spacing: -0.02em; color: var(--white); margin-bottom: 18px; }
+    h1 em { font-style: normal; color: var(--accent); }
+    .hero-desc { font-size: 0.975rem; color: var(--soft); line-height: 1.8; margin-bottom: 36px; max-width: 430px; }
+    .hero-desc strong { color: var(--text); font-weight: 500; }
+    .pillars { display: flex; flex-direction: column; gap: 13px; }
+    .pillar { display: flex; align-items: center; gap: 12px; font-size: 0.875rem; }
+    .pdot { width: 5px; height: 5px; border-radius: 50%; background: var(--accent); flex-shrink: 0; }
+    .pillar span { color: var(--muted); }
+    .pillar strong { color: var(--soft); font-weight: 500; }
+
+    /* ── FORM CARD ── */
+    .form-card { background: var(--card); border: 1px solid rgba(91,255,200,0.14); border-radius: 14px; padding: 36px 32px; }
+    .form-title { font-family: var(--fh); font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 5px; }
+    .form-sub { font-size: 0.8rem; color: var(--muted); margin-bottom: 24px; line-height: 1.6; }
+    .fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .fg { display: flex; flex-direction: column; gap: 5px; }
+    .fg.full { grid-column: 1 / -1; }
+    label { font-size: 0.7rem; font-weight: 600; color: var(--muted); letter-spacing: 0.07em; text-transform: uppercase; }
+    input, select { background: var(--surface); border: 1px solid var(--border); border-radius: 7px; color: var(--text); font-family: var(--fb); font-size: 0.88rem; padding: 10px 13px; outline: none; width: 100%; transition: border-color 0.2s; -webkit-appearance: none; }
+    input:focus, select:focus { border-color: rgba(91,255,200,0.4); }
+    input::placeholder { color: var(--muted); opacity: 0.5; }
+    select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6b8a' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 32px; }
+    select option { background: #13131c; }
+    .submit-btn { margin-top: 18px; width: 100%; background: var(--accent); color: #08080d; border: none; border-radius: 8px; font-family: var(--fh); font-size: 0.92rem; font-weight: 700; padding: 13px 24px; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+    .submit-btn:hover { background: var(--accent2); transform: translateY(-2px); }
+    .submit-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .form-msg { margin-top: 12px; font-size: 0.84rem; display: none; }
+
+    /* ── SHARED SECTION STYLES ── */
+    .section { padding: 88px 0; }
+    .divider { border: none; border-top: 1px solid var(--border); }
+    .section-tag { display: block; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.13em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+    h2 { font-family: var(--fh); font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 800; letter-spacing: -0.02em; color: var(--white); line-height: 1.12; margin-bottom: 8px; }
+    .section-intro { font-size: 0.9rem; color: var(--muted); max-width: 480px; line-height: 1.8; margin-bottom: 48px; }
+
+    /* ── PROBLEM/LÖSUNG ── */
+    .problems-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 56px; }
+    .prob-card { background: var(--card); padding: 32px 28px; }
+    .prob-icon { font-size: 1.4rem; margin-bottom: 14px; }
+    .prob-card h3 { font-family: var(--fh); font-size: 0.95rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .prob-card p { font-size: 0.84rem; color: var(--muted); line-height: 1.7; }
+    .arrow-row { display: flex; justify-content: center; align-items: center; gap: 12px; margin: 0 0 48px; }
+    .arrow-row span { font-size: 0.8rem; color: var(--muted); }
+    .arrow-row .arr { color: var(--accent); font-size: 1.4rem; }
+
+    /* ── LÖSUNGEN – stärker hervorgehoben ── */
+    .solutions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .sol-card {
+      background: linear-gradient(135deg, rgba(91,255,200,0.07) 0%, rgba(91,255,200,0.02) 100%);
+      border: 1px solid rgba(91,255,200,0.25);
+      border-radius: 14px; padding: 32px 28px;
+      position: relative; overflow: hidden;
+    }
+    .sol-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, var(--accent), transparent);
+    }
+    .sol-num { font-family: var(--fh); font-size: 0.7rem; font-weight: 700; color: var(--accent); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
+    .sol-card h3 { font-family: var(--fh); font-size: 1rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+    .sol-card p { font-size: 0.875rem; color: var(--soft); line-height: 1.75; }
+
+    /* ── VERTRAUEN / ÜBER MICH ── */
+    .trust-section { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 56px; display: grid; grid-template-columns: 220px 1fr; gap: 56px; align-items: center; }
+    .trust-photo { width: 220px; height: 260px; border-radius: 12px; object-fit: cover; border: 1px solid var(--border); display: block; }
+    .trust-photo-placeholder { width: 220px; height: 260px; border-radius: 12px; background: var(--surface); border: 2px dashed var(--border); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; }
+    .trust-photo-placeholder span { font-size: 0.78rem; color: var(--muted); text-align: center; line-height: 1.5; padding: 0 16px; }
+    .trust-right blockquote { font-family: var(--fh); font-size: clamp(1.1rem, 1.8vw, 1.4rem); font-weight: 700; color: var(--white); line-height: 1.4; letter-spacing: -0.01em; margin-bottom: 20px; }
+    .trust-right blockquote em { font-style: normal; color: var(--accent); }
+    .trust-right p { font-size: 0.9rem; color: var(--soft); line-height: 1.8; margin-bottom: 24px; }
+    .trust-name { font-family: var(--fh); font-size: 0.88rem; font-weight: 700; color: var(--white); }
+    .trust-role { font-size: 0.8rem; color: var(--muted); margin-top: 2px; }
+
+    /* ── STEPS ── */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--border); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+    .step { background: var(--card); padding: 32px 28px; transition: background 0.2s; }
+    .step:hover { background: #171724; }
+    .step-n { font-family: var(--fh); font-size: 2rem; font-weight: 800; color: rgba(91,255,200,0.08); line-height: 1; margin-bottom: 16px; }
+    .step h3 { font-family: var(--fh); font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .step p { font-size: 0.84rem; color: var(--muted); line-height: 1.7; }
+
+    /* ── FOR 3PLs ── */
+    .for3pl-box { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 52px; display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: start; }
+    .checklist { list-style: none; margin-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+    .checklist li { display: flex; align-items: flex-start; gap: 10px; font-size: 0.875rem; color: var(--muted); }
+    .checklist li::before { content: '✓'; color: var(--accent); font-weight: 700; flex-shrink: 0; margin-top: 2px; font-size: 0.8rem; }
+    .info-box { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 28px; }
+    .info-box-label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    .btn-accent { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #08080d; padding: 11px 22px; border-radius: 8px; font-family: var(--fh); font-weight: 700; font-size: 0.88rem; text-decoration: none; margin-top: 28px; transition: background 0.2s, transform 0.15s; }
+    .btn-accent:hover { background: var(--accent2); transform: translateY(-2px); }
+
+    /* ── FAQ ── */
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 24px 26px; transition: border-color 0.2s; }
+    .faq-item:hover { border-color: rgba(91,255,200,0.2); }
+    .faq-item h3 { font-family: var(--fh); font-size: 0.88rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .faq-item p { font-size: 0.84rem; color: var(--muted); line-height: 1.75; }
+
+    /* ── FOOTER ── */
+    footer { border-top: 1px solid var(--border); padding: 32px 0; }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; }
+    .footer-inner p { font-size: 0.8rem; color: var(--muted); }
+    .footer-links { display: flex; gap: 22px; }
+    .footer-links a { font-size: 0.8rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: var(--soft); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 840px) {
+      .wrap { padding: 0 20px; }
+      .hero { grid-template-columns: 1fr; gap: 36px; padding: 52px 0 44px; }
+      .steps, .problems-grid, .solutions-grid { grid-template-columns: 1fr; }
+      .for3pl-box { grid-template-columns: 1fr; padding: 28px 20px; gap: 28px; }
+      .faq-grid { grid-template-columns: 1fr; }
+      .fgrid { grid-template-columns: 1fr; }
+      .fg.full { grid-column: 1; }
+      .nav-right a:not(.pill) { display: none; }
+      .trust-section { grid-template-columns: 1fr; padding: 32px 24px; gap: 24px; text-align: center; }
+      .trust-photo { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; object-position: center top; margin: 0 auto; }
+      .trust-photo-placeholder { width: 120px; height: 120px; border-radius: 50%; margin: 0 auto; }
+      .trust-right blockquote { font-size: 1rem; }
+      .trust-right { text-align: left; }
+    }
+
+    /* ── BEWERTUNGEN ── */
+    .reviews-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 16px; }
+    .reviews-summary { display: flex; align-items: center; gap: 14px; margin-top: 10px; }
+    .reviews-avg { font-family: var(--fh); font-size: 2.6rem; font-weight: 800; color: var(--white); line-height: 1; }
+    .reviews-stars-static { color: var(--accent); font-size: 1.1rem; letter-spacing: 2px; }
+    .reviews-count { font-size: 0.8rem; color: var(--muted); }
+    .btn-review { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: var(--accent); padding: 10px 20px; border-radius: 8px; font-family: var(--fh); font-weight: 700; font-size: 0.85rem; text-decoration: none; border: 1px solid rgba(91,255,200,0.35); cursor: pointer; transition: background 0.2s, border-color 0.2s; }
+    .btn-review:hover { background: rgba(91,255,200,0.07); border-color: var(--accent); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .review-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 22px 22px 18px; display: flex; flex-direction: column; gap: 10px; transition: border-color 0.2s; }
+    .review-card:hover { border-color: rgba(91,255,200,0.15); }
+    .review-card-stars { color: var(--accent); font-size: 0.95rem; letter-spacing: 2px; }
+    .review-card-text { font-size: 0.855rem; color: var(--soft); line-height: 1.75; flex: 1; }
+    .review-card-meta { font-size: 0.75rem; color: var(--muted); }
+    .reviews-empty { font-size: 0.88rem; color: var(--muted); padding: 32px 0; }
+    .reviews-loading { font-size: 0.85rem; color: var(--muted); padding: 24px 0; }
+
+    /* ── MODAL ── */
+    .modal-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(6px); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
+    .modal-overlay.open { display: flex; }
+    .modal { background: var(--card); border: 1px solid rgba(91,255,200,0.18); border-radius: 16px; padding: 40px 36px; width: 100%; max-width: 460px; position: relative; animation: up .25s ease both; }
+    .modal-close { position: absolute; top: 16px; right: 18px; background: none; border: none; color: var(--muted); font-size: 1.3rem; cursor: pointer; line-height: 1; transition: color 0.2s; }
+    .modal-close:hover { color: var(--white); }
+    .modal h3 { font-family: var(--fh); font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .modal-sub { font-size: 0.82rem; color: var(--muted); margin-bottom: 28px; }
+    .star-picker { display: flex; gap: 8px; margin-bottom: 22px; }
+    .star-picker button { background: none; border: none; font-size: 1.8rem; cursor: pointer; color: var(--border); transition: color 0.15s, transform 0.1s; line-height: 1; padding: 0; }
+    .star-picker button.active { color: var(--accent); }
+    .star-picker button:hover { transform: scale(1.15); }
+    .modal textarea { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: var(--fb); font-size: 0.88rem; padding: 12px 14px; outline: none; width: 100%; resize: vertical; min-height: 110px; transition: border-color 0.2s; line-height: 1.65; }
+    .modal textarea:focus { border-color: rgba(91,255,200,0.4); }
+    .modal textarea::placeholder { color: var(--muted); opacity: 0.5; }
+    .modal-name-row { margin-bottom: 14px; }
+    .modal-name-row input { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: var(--fb); font-size: 0.88rem; padding: 10px 14px; outline: none; width: 100%; transition: border-color 0.2s; }
+    .modal-name-row input:focus { border-color: rgba(91,255,200,0.4); }
+    .modal-name-row input::placeholder { color: var(--muted); opacity: 0.5; }
+    .modal-label { font-size: 0.7rem; font-weight: 600; color: var(--muted); letter-spacing: 0.07em; text-transform: uppercase; display: block; margin-bottom: 6px; }
+    .modal-submit { margin-top: 18px; width: 100%; background: var(--accent); color: #08080d; border: none; border-radius: 8px; font-family: var(--fh); font-size: 0.92rem; font-weight: 700; padding: 13px 24px; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+    .modal-submit:hover { background: var(--accent2); transform: translateY(-2px); }
+    .modal-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .modal-msg { margin-top: 12px; font-size: 0.84rem; display: none; }
+
+    @media (max-width: 840px) { .reviews-grid { grid-template-columns: 1fr; } .reviews-header { flex-direction: column; align-items: flex-start; } .modal { padding: 28px 22px; } }
+
+    @keyframes up { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+    .chip      { animation: up .4s ease both; }
+    h1         { animation: up .4s .06s ease both; }
+    .hero-desc { animation: up .4s .12s ease both; }
+    .pillars   { animation: up .4s .17s ease both; }
+    .form-card { animation: up .45s .08s ease both; }
+  </style>
+</head>
+<body>
+<div class="glow"></div>
+
+<nav aria-label="Hauptnavigation">
+  <div class="nav-inner">
+    <a href="/" class="logo">Fulfill<span>bridge</span></a>
+    <div class="nav-right">
+      <a href="#ablauf">Ablauf</a>
+      <a href="#3pl">Für 3PLs</a>
+      <a href="#faq">FAQ</a>
+      <!-- ✅ Punkt 5: Eigene Unterseite statt Scroll -->
+      <a href="/anfrage" class="pill">Jetzt anfragen</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- ── HERO ── -->
+  <section aria-labelledby="hero-h1">
+    <div class="wrap" style="padding-top: 96px; padding-bottom: 88px;">
+    <div style="max-width: 680px;">
+      <div class="chip">DE · AT · CH &nbsp;·&nbsp; D2C &amp; E-Commerce</div>
+      <h1 id="hero-h1">Den richtigen<br><em>3PL-Partner</em><br>für deinen Shop finden.</h1>
+      <p class="hero-desc">Du willst dein Fulfillment auslagern? Wir vermitteln dich an <strong>geprüfte 3PLs im DACH-Raum</strong> – schnell, strukturiert, ohne wochenlange Recherche.</p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap; margin-bottom: 48px;">
+        <a href="/anfrage" style="display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#08080d;padding:14px 28px;border-radius:8px;font-family:var(--fh);font-weight:700;font-size:0.95rem;text-decoration:none;transition:background 0.2s,transform 0.15s;box-shadow:0 0 28px rgba(91,255,200,0.2);" onmouseover="this.style.background='#3de0a8';this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#5bffc8';this.style.transform='none'">
+          Jetzt passenden 3PL finden
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#ablauf" style="display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--soft);padding:14px 24px;border-radius:8px;font-size:0.9rem;font-weight:500;text-decoration:none;border:1px solid var(--border);transition:border-color 0.2s,color 0.2s;" onmouseover="this.style.borderColor='rgba(91,255,200,0.3)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--soft)'">
+          Wie funktioniert es?
+        </a>
+      </div>
+      <div class="pillars">
+        <div class="pillar"><div class="pdot"></div><span>Anfrage stellen – wir übernehmen die Suche</span></div>
+        <div class="pillar"><div class="pdot"></div><span>Matching nach Volumen, Region &amp; Shop-System</span></div>
+        <div class="pillar"><div class="pdot"></div><span>Direkte Verbindung zum passenden Anbieter</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── PUNKT 6: PROBLEME & LÖSUNGEN ── -->
+  <section class="section" id="probleme" aria-labelledby="prob-h2">
+    <div class="wrap">
+      <span class="section-tag">Kommt dir das bekannt vor?</span>
+      <h2 id="prob-h2">Die häufigsten Fulfillment-Probleme von D2C-Shops</h2>
+      <p class="section-intro">Bevor du wächst, stehst du vor denselben Hürden wie hunderte andere Shops im DACH-Raum.</p>
+
+      <div class="problems-grid">
+        <div class="prob-card">
+          <div class="prob-icon">📦</div>
+          <h3>Fulfillment frisst deine Zeit</h3>
+          <p>Du packst noch selbst, organisierst Retouren und verlierst Stunden die du für Wachstum brauchst.</p>
+        </div>
+        <div class="prob-card">
+          <div class="prob-icon">🔍</div>
+          <h3>Anbietersuche ist ein Vollzeitjob</h3>
+          <p>Du weißt nicht, welcher 3PL zu deinem Volumen, deinem System und deiner Region passt – die Recherche ist unübersichtlich.</p>
+        </div>
+        <div class="prob-card">
+          <div class="prob-icon">🇨🇭</div>
+          <h3>Schweiz ist kompliziert</h3>
+          <p>Zoll, andere Versandkosten, separate Abwicklung – viele Shops verlieren CH-Kunden weil die Logistik nicht stimmt.</p>
+        </div>
+        <div class="prob-card">
+          <div class="prob-icon">💸</div>
+          <h3>Versteckte Kosten beim Wechsel</h3>
+          <p>Onboarding-Gebühren, Mindestmengen, unklare Pick-&amp;-Pack-Preise – der falsche 3PL kostet dich mehr als er spart.</p>
+        </div>
+        <div class="prob-card">
+          <div class="prob-icon">📈</div>
+          <h3>Dein Shop wächst, der 3PL nicht</h3>
+          <p>Du bist deinem aktuellen Anbieter entwachsen – Peak-Saisons werden zum Risiko, Fehlerquoten steigen.</p>
+        </div>
+        <div class="prob-card">
+          <div class="prob-icon">🔌</div>
+          <h3>Integrationen funktionieren nicht</h3>
+          <p>Dein Shop-System und das Warehouse-System sprechen nicht miteinander – manuelle Prozesse und Fehler sind die Folge.</p>
+        </div>
+      </div>
+
+      <div class="arrow-row">
+        <span>Das muss nicht so sein</span>
+        <span class="arr">↓</span>
+      </div>
+
+      <div class="solutions-grid">
+        <div class="sol-card">
+          <div class="sol-num">LÖSUNG 01</div>
+          <h3>Wir übernehmen die Suche</h3>
+          <p>Kein stundenlanger Vergleich mehr. Du gibst dein Profil an – wir gleichen es mit geprüften Anbietern ab.</p>
+        </div>
+        <div class="sol-card">
+          <div class="sol-num">LÖSUNG 02</div>
+          <h3>Nur echter Fit</h3>
+          <p>Wir vermitteln nur dann, wenn Volumen, Region, Tech-Integration und Produktprofil wirklich passen.</p>
+        </div>
+        <div class="sol-card">
+          <div class="sol-num">LÖSUNG 03</div>
+          <h3>DACH inkl. Schweiz</h3>
+          <p>Wir prüfen explizit die CH-Abdeckung – Inhouse oder über einen geprüften Partner, transparent kommuniziert.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── ABLAUF ── -->
+  <section class="section" id="ablauf" aria-labelledby="ablauf-h2">
+    <div class="wrap">
+      <span class="section-tag">So läuft es ab</span>
+      <h2 id="ablauf-h2">Wie die Vermittlung funktioniert</h2>
+      <p class="section-intro">Drei Schritte – kein Overhead, keine langen Prozesse.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-n">01</div>
+          <h3>Anfrage stellen</h3>
+          <p>Du gibst ein paar Eckdaten zu deinem Shop an. Volumen, SKUs, System – dauert unter 2 Minuten.</p>
+        </div>
+        <div class="step">
+          <div class="step-n">02</div>
+          <h3>Matching</h3>
+          <p>Wir gleichen dein Profil mit passenden 3PLs ab – nach Region, Volumen und Tech-Integration.</p>
+        </div>
+        <div class="step">
+          <div class="step-n">03</div>
+          <h3>Direkte Verbindung</h3>
+          <p>Du wirst mit den passenden Anbietern verbunden. Die Abstimmung läuft ab da direkt zwischen euch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── FÜR 3PLs ── -->
+  <!-- ✅ Punkt 2: Link führt jetzt auf /3pl-bewerben -->
+  <section class="section" id="3pl" aria-labelledby="3pl-h2">
+    <div class="wrap">
+      <div class="for3pl-box">
+        <div>
+          <span class="section-tag">Für Fulfillment-Anbieter</span>
+          <h2 id="3pl-h2">Als 3PL qualifizierte Anfragen erhalten</h2>
+          <p style="font-size:0.9rem;color:var(--muted);margin-top:14px;line-height:1.8;">Du betreibst Fulfillment in DE, AT oder CH und willst strukturierte Anfragen von D2C-Shops erhalten? Wir nehmen nur Anbieter auf, deren Profil und Kapazitäten klar dokumentiert sind.</p>
+          <ul class="checklist">
+            <li>Qualifizierte Leads – gefiltert nach Volumen &amp; Produktprofil</li>
+            <li>DACH-Fokus – klarer geografischer Scope</li>
+            <li>Kein Massen-Outreach – nur echter Fit</li>
+            <li>Schnelle Prozesse – klare Erwartungen an beide Seiten</li>
+          </ul>
+          <a href="/3pl-bewerben" class="btn-accent">Als 3PL bewerben →</a>
+        </div>
+        <div class="info-box">
+          <div class="info-box-label">Was wir vorab benötigen</div>
+          <ul class="checklist">
+            <li>Standorte &amp; Abdeckung (DE/AT/CH) inkl. CH-Modell</li>
+            <li>Sweet Spot (Orders/Monat) &amp; Spezialisierungen</li>
+            <li>Integrationen (Shopify / Shopware / WooCommerce)</li>
+            <li>Typische Reaktionszeit auf Anfragen</li>
+            <li>Ansprechpartner &amp; E-Mail</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── VERTRAUEN ── -->
+  <section class="section" id="ueber" aria-labelledby="trust-h2">
+    <div class="wrap">
+      <span class="section-tag">Wer steckt dahinter</span>
+      <h2 id="trust-h2" style="margin-bottom:32px;">Ein Ansprechpartner. Kein Konzern.</h2>
+      <div class="trust-section">
+        <!-- Foto -->
+        <img src="/foto.png" alt="Joé, Gründer Fulfillbridge" class="trust-photo" />
+        <div class="trust-right">
+          <blockquote>„Ich helfe D2C-Shops dabei, den richtigen Fulfillment-Partner zu finden – <em>ohne den üblichen Aufwand.</em>"</blockquote>
+          <p>Fulfillbridge ist kein großes Unternehmen mit langen Prozessen. Du hast einen direkten Ansprechpartner, der dein Profil kennt, den DACH-Markt versteht und dich persönlich mit den richtigen Anbietern verbindet.</p>
+          <p>Kein automatisierter Vergleichsrechner, kein Call-Center – sondern ein persönlicher Vermittler der sich Zeit nimmt.</p>
+          <div class="trust-name">Joé</div>
+          <div class="trust-role">Gründer, Fulfillbridge</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <!-- ── FAQ ── -->
+  <section class="section" id="faq" aria-labelledby="faq-h2">
+    <div class="wrap">
+      <span class="section-tag">Häufige Fragen</span>
+      <h2 id="faq-h2">FAQ – 3PL Fulfillment im DACH-Raum</h2>
+      <p class="section-intro">Antworten auf die häufigsten Fragen zur Zusammenarbeit.</p>
+      <div class="faq-grid">
+        <div class="faq-item"><h3>Für welche Shopgrößen ist das sinnvoll?</h3><p>Typisch ab ca. 500 Orders/Monat. Darunter lohnt sich oft noch Inhouse-Fulfillment oder ein sehr schlanker Anbieter.</p></div>
+        <div class="faq-item"><h3>Was kostet der Service?</h3><p>Das Pricing besprechen wir individuell nach dem ersten Kontakt – abhängig von Profil und Umfang.</p></div>
+        <div class="faq-item"><h3>Arbeitet ihr exklusiv mit bestimmten 3PLs?</h3><p>Nein. Die Auswahl basiert ausschließlich auf Fit: Volumen, Profil, DACH-Abdeckung und Reaktionszeit.</p></div>
+        <div class="faq-item"><h3>Deckt ihr auch die Schweiz ab?</h3><p>Ja. Wir prüfen explizit, ob ein 3PL die Schweiz Inhouse oder über einen Partner bedienen kann.</p></div>
+        <div class="faq-item"><h3>Was, wenn kein Anbieter passt?</h3><p>Dann suchen wir weiter. Wir starten nur, wenn dein Profil grundsätzlich in unserem Netzwerk abbildbar ist.</p></div>
+        <div class="faq-item"><h3>Wie läuft die Kommunikation ab?</h3><p>Nach dem Matching verbinden wir dich direkt mit den Anbietern. Wir moderieren bei Bedarf.</p></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  <hr class="divider" />
+
+  <!-- ── BEWERTUNGEN ── -->
+  <section class="section" id="bewertungen" aria-labelledby="reviews-h2">
+    <div class="wrap">
+      <div class="reviews-header">
+        <div>
+          <span class="section-tag">Kundenstimmen</span>
+          <h2 id="reviews-h2">Was Kunden über Fulfillbridge sagen</h2>
+          <div class="reviews-summary">
+            <div class="reviews-avg" id="avg-score">–</div>
+            <div>
+              <div class="reviews-stars-static" id="avg-stars"></div>
+              <div class="reviews-count" id="reviews-count">Lade Bewertungen…</div>
+            </div>
+          </div>
+        </div>
+        <button class="btn-review" onclick="openModal()">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+          Bewertung abgeben
+        </button>
+      </div>
+      <div id="reviews-grid" class="reviews-grid">
+        <div class="reviews-loading">Bewertungen werden geladen…</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── BEWERTUNGS-MODAL ── -->
+<div class="modal-overlay" id="review-modal" onclick="handleOverlayClick(event)">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3>Deine Bewertung</h3>
+    <p class="modal-sub">Wie war deine Erfahrung mit Fulfillbridge?</p>
+    <div class="star-picker" id="star-picker">
+      <button type="button" data-val="1" onclick="setStar(1)">★</button>
+      <button type="button" data-val="2" onclick="setStar(2)">★</button>
+      <button type="button" data-val="3" onclick="setStar(3)">★</button>
+      <button type="button" data-val="4" onclick="setStar(4)">★</button>
+      <button type="button" data-val="5" onclick="setStar(5)">★</button>
+    </div>
+    <div class="modal-name-row">
+      <label class="modal-label" for="review-name">Dein Name (optional)</label>
+      <input type="text" id="review-name" placeholder="z.B. Max M." />
+    </div>
+    <label class="modal-label" for="review-text">Deine Erfahrung</label>
+    <textarea id="review-text" placeholder="Was hat Fulfillbridge für dich getan? Was hat besonders gut geklappt?"></textarea>
+    <button class="modal-submit" id="review-submit-btn" onclick="submitReview()">Bewertung absenden →</button>
+    <div class="modal-msg" id="review-msg"></div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <p>© 2026 Fulfillbridge &nbsp;·&nbsp; 3PL Vermittlung DACH</p>
+      <div class="footer-links">
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
+        <a href="https://www.linkedin.com/in/fulfillbridge-dach-8832b03a8/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Formular ist auf /anfrage -->
+
+<script>
+(function(){
+  const TOKEN = 'patjpHLbe1Uo3tmk9.3151d7446c6249a3d1ec3e8ec1648d11d71ab4020e79228666efc84fd6ca320b';
+  const BASE  = 'appNUDG6o23reR10C';
+  const TABLE = 'Bewertungen';
+  const API   = `https://api.airtable.com/v0/${BASE}/${encodeURIComponent(TABLE)}`;
+  const HEAD  = { 'Authorization': `Bearer ${TOKEN}`, 'Content-Type': 'application/json' };
+
+  let selectedStar = 0;
+
+  window.setStar = function(val) {
+    selectedStar = val;
+    document.querySelectorAll('#star-picker button').forEach(btn => {
+      btn.classList.toggle('active', parseInt(btn.dataset.val) <= val);
+    });
+  };
+
+  window.openModal = function() {
+    document.getElementById('review-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  };
+  window.closeModal = function() {
+    document.getElementById('review-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  };
+  window.handleOverlayClick = function(e) {
+    if (e.target === document.getElementById('review-modal')) closeModal();
+  };
+
+  function starsStr(n) {
+    return '★'.repeat(n) + '☆'.repeat(5 - n);
+  }
+
+  async function loadReviews() {
+    const grid    = document.getElementById('reviews-grid');
+    const avgEl   = document.getElementById('avg-score');
+    const starsEl = document.getElementById('avg-stars');
+    const countEl = document.getElementById('reviews-count');
+    try {
+      const r = await fetch(`${API}?sort%5B0%5D%5Bfield%5D=Datum&sort%5B0%5D%5Bdirection%5D=desc`, { headers: HEAD });
+      if (!r.ok) throw new Error();
+      const data = await r.json();
+      const records = data.records || [];
+      if (records.length === 0) {
+        grid.innerHTML = '<div class="reviews-empty">Noch keine Bewertungen – sei der Erste!</div>';
+        avgEl.textContent = '–'; starsEl.textContent = ''; countEl.textContent = '0 Bewertungen';
+        return;
+      }
+      const total = records.reduce((s, rec) => s + (parseInt(rec.fields.Sterne) || 0), 0);
+      const mean  = (total / records.length).toFixed(1);
+      avgEl.textContent = mean;
+      starsEl.textContent = starsStr(Math.round(parseFloat(mean)));
+      countEl.textContent = `${records.length} Bewertung${records.length !== 1 ? 'en' : ''}`;
+      grid.innerHTML = records.map(rec => {
+        const f    = rec.fields;
+        const n    = parseInt(f.Sterne) || 0;
+        const name = f.Name || 'Anonym';
+        const date = f.Datum ? new Date(f.Datum).toLocaleDateString('de-DE', { month: 'short', year: 'numeric' }) : '';
+        const text = (f.Text || '').replace(/</g, '&lt;');
+        return `<div class="review-card">
+          <div class="review-card-stars">${starsStr(n)}</div>
+          <div class="review-card-text">${text}</div>
+          <div class="review-card-meta">${name}${date ? ' · ' + date : ''}</div>
+        </div>`;
+      }).join('');
+    } catch(e) {
+      grid.innerHTML = '<div class="reviews-empty">Bewertungen konnten nicht geladen werden.</div>';
+      countEl.textContent = '';
+    }
+  }
+
+  window.submitReview = async function() {
+    const btn  = document.getElementById('review-submit-btn');
+    const msg  = document.getElementById('review-msg');
+    const text = document.getElementById('review-text').value.trim();
+    const name = document.getElementById('review-name').value.trim();
+    if (!selectedStar) {
+      msg.style.display='block'; msg.style.color='#e57373';
+      msg.textContent='Bitte wähle zuerst eine Sternebewertung.'; return;
+    }
+    if (!text) {
+      msg.style.display='block'; msg.style.color='#e57373';
+      msg.textContent='Bitte schreib kurz etwas zu deiner Erfahrung.'; return;
+    }
+    btn.disabled = true; btn.textContent = 'Wird gesendet…';
+    msg.style.display = 'none';
+    try {
+      const body = { records: [{ fields: { Sterne: selectedStar, Text: text, Name: name || 'Anonym', Datum: new Date().toISOString() } }] };
+      const r = await fetch(API, { method: 'POST', headers: HEAD, body: JSON.stringify(body) });
+      if (!r.ok) { const err = await r.json(); throw new Error(err.error?.message || 'Fehler'); }
+      msg.style.display='block'; msg.style.color='var(--accent)';
+      msg.textContent = '✓ Danke für deine Bewertung!';
+      document.getElementById('review-text').value = '';
+      document.getElementById('review-name').value = '';
+      selectedStar = 0;
+      document.querySelectorAll('#star-picker button').forEach(b => b.classList.remove('active'));
+      setTimeout(() => { closeModal(); loadReviews(); }, 1400);
+    } catch(e) {
+      msg.style.display='block'; msg.style.color='#e57373';
+      msg.textContent = 'Fehler beim Senden – bitte schreib uns direkt auf LinkedIn.';
+    }
+    btn.disabled = false; btn.textContent = 'Bewertung absenden →';
+  };
+
+  loadReviews();
+})();
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Für welche Shopgrößen ist das sinnvoll?","acceptedAnswer":{"@type":"Answer","text":"Typisch ab ca. 500 Orders/Monat."}},{"@type":"Question","name":"Was kostet der Service?","acceptedAnswer":{"@type":"Answer","text":"Das Pricing besprechen wir individuell nach dem ersten Kontakt."}},{"@type":"Question","name":"Arbeitet ihr exklusiv mit bestimmten 3PLs?","acceptedAnswer":{"@type":"Answer","text":"Nein. Die Auswahl basiert auf Fit: Volumen, Profil, DACH-Abdeckung und Reaktionszeit."}},{"@type":"Question","name":"Deckt ihr auch die Schweiz ab?","acceptedAnswer":{"@type":"Answer","text":"Ja. Wir prüfen, ob ein 3PL die Schweiz Inhouse oder über einen Partner bedienen kann."}}]}
+</script>
+</body>
+</html>
