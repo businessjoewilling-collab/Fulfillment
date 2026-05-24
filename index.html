@@ -627,7 +627,7 @@
       setTimeout(() => { closeModal(); loadReviews(); }, 1400);
     } catch(e) {
       msg.style.display='block'; msg.style.color='#e57373';
-      msg.textContent = 'Fehler beim Senden – bitte schreib uns direkt auf LinkedIn.';
+      msg.textContent = 'Fehler: ' + e.message;
     }
     btn.disabled = false; btn.textContent = 'Bewertung absenden →';
   };
