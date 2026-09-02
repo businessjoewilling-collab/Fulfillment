@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kundenbewertungen – Fulfillbridge</title>
+  <meta name="description" content="Was Kunden über Fulfillbridge sagen – geprüfte Bewertungen zur 3PL-Vermittlung im DACH-Raum." />
+  <link rel="canonical" href="https://fulfillbridge.de/bewertungen" />
+
+  <!-- Vercel Web Analytics -->
+  <script defer src="/_vercel/insights/script.js"></script>
+  <!-- Vercel Speed Insights -->
+  <script defer src="/_vercel/speed-insights/script.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root{--bg:#08080d;--surface:#0f0f16;--card:#13131c;--border:#22222e;--accent:#5bffc8;--accent2:#3de0a8;--text:#c8c8e0;--muted:#6b6b8a;--soft:#9494b8;--white:#f0f0fa;--fh:'Manrope',sans-serif;--fb:'Inter',sans-serif;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg);color:var(--text);font-family:var(--fb);font-size:16px;line-height:1.75;overflow-x:hidden;}
+    body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.015) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.015) 1px,transparent 1px);background-size:64px 64px;pointer-events:none;z-index:0;}
+    .glow{position:fixed;top:-400px;left:50%;transform:translateX(-50%);width:900px;height:900px;background:radial-gradient(ellipse,rgba(91,255,200,0.04) 0%,transparent 65%);pointer-events:none;z-index:0;}
+    .wrap{max-width:1040px;margin:0 auto;padding:0 28px;position:relative;z-index:1;}
+    a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px;}
+    nav{position:sticky;top:0;z-index:100;background:rgba(8,8,13,0.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px;max-width:1040px;margin:0 auto;padding:0 28px;}
+    .logo{font-family:var(--fh);font-weight:800;font-size:1.1rem;color:var(--white);text-decoration:none;letter-spacing:-0.01em;}
+    .logo span{color:var(--accent);}
+    .back-link{display:inline-flex;align-items:center;gap:6px;color:var(--muted);text-decoration:none;font-size:0.85rem;transition:color 0.2s;}
+    .back-link:hover{color:var(--accent);}
+
+    .page-header{padding:72px 0 52px;}
+    .section-tag{display:block;font-size:0.7rem;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;}
+    h1{font-family:var(--fh);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:800;letter-spacing:-0.02em;color:var(--white);line-height:1.12;margin-bottom:16px;}
+    .verify-note{border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;background:var(--card);padding:18px 22px;font-size:0.85rem;color:var(--soft);line-height:1.75;max-width:680px;margin-bottom:40px;}
+    .summary-row{display:flex;align-items:center;gap:14px;margin-bottom:40px;}
+    .avg-big{font-family:var(--fh);font-size:2.8rem;font-weight:800;color:var(--white);line-height:1;}
+    .avg-stars{color:var(--accent);font-size:1.15rem;letter-spacing:2px;}
+    .avg-count{font-size:0.82rem;color:var(--muted);}
+
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-bottom:80px;}
+    .review-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:24px 22px 20px;display:flex;flex-direction:column;gap:10px;transition:border-color 0.2s;}
+    .review-card:hover{border-color:rgba(91,255,200,0.15);}
+    .review-card-stars{color:var(--accent);font-size:0.95rem;letter-spacing:2px;}
+    .review-card-text{font-size:0.855rem;color:var(--soft);line-height:1.75;flex:1;}
+    .review-card-meta{font-size:0.75rem;color:var(--muted);}
+    .reviews-empty{font-size:0.9rem;color:var(--muted);padding:40px 0;grid-column:1/-1;line-height:1.8;}
+    .reviews-loading{font-size:0.85rem;color:var(--muted);padding:24px 0;grid-column:1/-1;}
+
+    .btn-review{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--accent);padding:10px 20px;border-radius:8px;font-family:var(--fh);font-weight:700;font-size:0.85rem;text-decoration:none;border:1px solid rgba(91,255,200,0.35);cursor:pointer;transition:background 0.2s,border-color 0.2s;}
+    .btn-review:hover{background:rgba(91,255,200,0.07);border-color:var(--accent);}
+
+    /* Modal */
+    .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(6px);z-index:200;align-items:center;justify-content:center;padding:20px;}
+    .modal-overlay.open{display:flex;}
+    .modal{background:var(--card);border:1px solid rgba(91,255,200,0.18);border-radius:16px;padding:40px 36px;width:100%;max-width:460px;position:relative;animation:up .25s ease both;}
+    .modal-close{position:absolute;top:16px;right:18px;background:none;border:none;color:var(--muted);font-size:1.3rem;cursor:pointer;line-height:1;transition:color 0.2s;}
+    .modal-close:hover{color:var(--white);}
+    .modal h2{font-family:var(--fh);font-size:1.1rem;font-weight:700;color:var(--white);margin-bottom:6px;}
+    .modal-sub{font-size:0.82rem;color:var(--muted);margin-bottom:28px;line-height:1.6;}
+    .star-picker{display:flex;gap:8px;margin-bottom:22px;}
+    .star-picker button{background:none;border:none;font-size:1.8rem;cursor:pointer;color:var(--border);transition:color 0.15s,transform 0.1s;line-height:1;padding:0;}
+    .star-picker button.active{color:var(--accent);}
+    .star-picker button:hover{transform:scale(1.15);}
+    .modal textarea{background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:var(--fb);font-size:0.88rem;padding:12px 14px;outline:none;width:100%;resize:vertical;min-height:110px;transition:border-color 0.2s;line-height:1.65;}
+    .modal textarea:focus{border-color:rgba(91,255,200,0.4);}
+    .modal textarea::placeholder{color:var(--muted);opacity:0.5;}
+    .modal-name-row{margin-bottom:14px;}
+    .modal-name-row input{background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:var(--fb);font-size:0.88rem;padding:10px 14px;outline:none;width:100%;transition:border-color 0.2s;}
+    .modal-name-row input:focus{border-color:rgba(91,255,200,0.4);}
+    .modal-name-row input::placeholder{color:var(--muted);opacity:0.5;}
+    .modal-label{font-size:0.7rem;font-weight:600;color:var(--muted);letter-spacing:0.07em;text-transform:uppercase;display:block;margin-bottom:6px;}
+    .modal-submit{margin-top:18px;width:100%;background:var(--accent);color:#08080d;border:none;border-radius:8px;font-family:var(--fh);font-size:0.92rem;font-weight:700;padding:13px 24px;cursor:pointer;transition:background 0.2s,transform 0.15s;}
+    .modal-submit:hover{background:var(--accent2);transform:translateY(-2px);}
+    .modal-submit:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
+    .modal-msg{margin-top:12px;font-size:0.84rem;display:none;line-height:1.7;}
+    .modal-privacy{font-size:0.72rem;color:var(--muted);margin-top:12px;line-height:1.6;}
+    .modal-privacy a{color:var(--accent);}
+    .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+
+    footer{border-top:1px solid var(--border);padding:32px 0;}
+    .footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;}
+    .footer-inner p{font-size:0.8rem;color:var(--muted);}
+    .footer-links{display:flex;gap:22px;flex-wrap:wrap;}
+    .footer-links a{font-size:0.8rem;color:var(--muted);text-decoration:none;transition:color 0.2s;}
+    .footer-links a:hover{color:var(--soft);}
+
+    @media(max-width:840px){.reviews-grid{grid-template-columns:1fr;}.modal{padding:28px 22px;}.summary-row{flex-wrap:wrap;}}
+    @keyframes up{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+    @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation:none !important;transition:none !important;}html{scroll-behavior:auto;}}
+  </style>
+</head>
+<body>
+<div class="glow"></div>
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="logo">Fulfill<span>bridge</span></a>
+    <a href="/" class="back-link">
+      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Zurück zur Startseite
+    </a>
+  </div>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="page-header">
+      <span class="section-tag">Kundenstimmen</span>
+      <h1>Was Kunden über Fulfillbridge sagen</h1>
+
+      <p class="verify-note">
+        Ich veröffentliche ausschließlich Bewertungen von Shops, die ich tatsächlich an einen
+        Fulfillment-Partner vermittelt habe. Jede Bewertung wird vor der Veröffentlichung manuell
+        geprüft. Bewertungen werden weder gekauft noch für ihre Abgabe vergütet.
+      </p>
+
+      <div class="summary-row">
+        <div class="avg-big" id="avg-score">–</div>
+        <div>
+          <div class="avg-stars" id="avg-stars"></div>
+          <div class="avg-count" id="reviews-count">Bewertungen werden geladen…</div>
+        </div>
+        <button class="btn-review" id="open-modal-btn" style="margin-left:auto;">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          Bewertung abgeben
+        </button>
+      </div>
+
+      <div id="reviews-grid" class="reviews-grid">
+        <div class="reviews-loading">Bewertungen werden geladen…</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Modal -->
+<div class="modal-overlay" id="review-modal" role="dialog" aria-modal="true" aria-labelledby="modal-h">
+  <div class="modal">
+    <button class="modal-close" id="close-modal-btn" aria-label="Schließen">✕</button>
+    <h2 id="modal-h">Deine Bewertung</h2>
+    <p class="modal-sub">Wie war deine Erfahrung mit Fulfillbridge? Deine Bewertung wird geprüft, bevor sie erscheint.</p>
+
+    <div class="star-picker" id="star-picker" role="group" aria-label="Sternebewertung">
+      <button type="button" data-val="1" aria-label="1 Stern">★</button>
+      <button type="button" data-val="2" aria-label="2 Sterne">★</button>
+      <button type="button" data-val="3" aria-label="3 Sterne">★</button>
+      <button type="button" data-val="4" aria-label="4 Sterne">★</button>
+      <button type="button" data-val="5" aria-label="5 Sterne">★</button>
+    </div>
+
+    <div class="modal-name-row">
+      <label class="modal-label" for="review-name">Dein Name (optional)</label>
+      <input type="text" id="review-name" placeholder="z.B. Max M." />
+    </div>
+
+    <label class="modal-label" for="review-text">Deine Erfahrung</label>
+    <textarea id="review-text" placeholder="Was hat Fulfillbridge für dich getan? Was hat besonders gut geklappt?"></textarea>
+
+    <div class="hp" aria-hidden="true">
+      <label for="website_url">Bitte leer lassen</label>
+      <input type="text" id="website_url" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <button class="modal-submit" id="review-submit-btn">Bewertung absenden</button>
+    <div class="modal-msg" id="review-msg" role="status" aria-live="polite"></div>
+    <p class="modal-privacy">
+      Mit dem Absenden stimmst du zu, dass ich deine Angaben zur Prüfung und Veröffentlichung
+      verarbeite. Details in der <a href="/datenschutz">Datenschutzerklärung</a>.
+    </p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <p>© 2026 Fulfillbridge &nbsp;·&nbsp; 3PL Vermittlung DACH &nbsp;·&nbsp; <a href="mailto:kontakt@fulfillbridge.de" style="color:var(--soft);text-decoration:none;">kontakt@fulfillbridge.de</a></p>
+      <div class="footer-links">
+        <a href="/impressum">Impressum</a>
+        <a href="/datenschutz">Datenschutz</a>
+        <a href="https://www.linkedin.com/in/fulfillbridge-dach-8832b03a8/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const modal    = document.getElementById('review-modal');
+  const grid     = document.getElementById('reviews-grid');
+  const avgEl    = document.getElementById('avg-score');
+  const starsEl  = document.getElementById('avg-stars');
+  const countEl  = document.getElementById('reviews-count');
+  const msg      = document.getElementById('review-msg');
+  const btn      = document.getElementById('review-submit-btn');
+
+  let selectedStar = 0;
+
+  function starsStr(n){ return '★'.repeat(n) + '☆'.repeat(5 - n); }
+
+  function openModal(){ modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal(){ modal.classList.remove('open'); document.body.style.overflow = ''; }
+
+  document.getElementById('open-modal-btn').addEventListener('click', openModal);
+  document.getElementById('close-modal-btn').addEventListener('click', closeModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+
+  document.querySelectorAll('#star-picker button').forEach(b => {
+    b.addEventListener('click', () => {
+      selectedStar = parseInt(b.dataset.val, 10);
+      document.querySelectorAll('#star-picker button').forEach(x => {
+        x.classList.toggle('active', parseInt(x.dataset.val, 10) <= selectedStar);
+      });
+    });
+  });
+
+  // Baut die Karte per DOM-API statt innerHTML – kein XSS moeglich.
+  function buildCard(r){
+    const card = document.createElement('div');
+    card.className = 'review-card';
+
+    const stars = document.createElement('div');
+    stars.className = 'review-card-stars';
+    stars.textContent = starsStr(r.sterne);
+
+    const text = document.createElement('div');
+    text.className = 'review-card-text';
+    text.textContent = r.text;
+
+    const meta = document.createElement('div');
+    meta.className = 'review-card-meta';
+    const date = r.datum
+      ? new Date(r.datum).toLocaleDateString('de-DE', { month: 'short', year: 'numeric' })
+      : '';
+    meta.textContent = r.name + (date ? ' · ' + date : '');
+
+    card.append(stars, text, meta);
+    return card;
+  }
+
+  async function loadReviews(){
+    try {
+      const r = await fetch('/api/bewertungen');
+      if (!r.ok) throw new Error();
+      const data = await r.json();
+      const reviews = data.reviews || [];
+
+      grid.textContent = '';
+
+      if (reviews.length === 0) {
+        const empty = document.createElement('div');
+        empty.className = 'reviews-empty';
+        empty.textContent = 'Hier erscheinen die Bewertungen der Shops, die ich vermittelt habe, sobald sie geprüft sind.';
+        grid.appendChild(empty);
+        avgEl.textContent = '–';
+        starsEl.textContent = '';
+        countEl.textContent = '';
+        return;
+      }
+
+      const total = reviews.reduce((s, x) => s + x.sterne, 0);
+      const mean  = (total / reviews.length).toFixed(1);
+      avgEl.textContent   = mean;
+      starsEl.textContent = starsStr(Math.round(parseFloat(mean)));
+      countEl.textContent = reviews.length + ' geprüfte Bewertung' + (reviews.length !== 1 ? 'en' : '');
+
+      reviews.forEach(x => grid.appendChild(buildCard(x)));
+    } catch(e) {
+      grid.textContent = '';
+      const err = document.createElement('div');
+      err.className = 'reviews-empty';
+      err.textContent = 'Die Bewertungen konnten gerade nicht geladen werden. Lade die Seite neu oder versuch es später noch einmal.';
+      grid.appendChild(err);
+      countEl.textContent = '';
+    }
+  }
+
+  btn.addEventListener('click', async function(){
+    const text = document.getElementById('review-text').value.trim();
+    const name = document.getElementById('review-name').value.trim();
+    const hp   = document.getElementById('website_url').value.trim();
+
+    function show(t, ok){
+      msg.style.display = 'block';
+      msg.style.color = ok ? 'var(--accent)' : '#e57373';
+      msg.textContent = t;
+    }
+
+    if (!selectedStar) { show('Wähle zuerst eine Sternebewertung.', false); return; }
+    if (text.length < 10) { show('Schreib bitte kurz etwas zu deiner Erfahrung.', false); return; }
+
+    btn.disabled = true;
+    btn.textContent = 'Wird gesendet…';
+    msg.style.display = 'none';
+
+    try {
+      const r = await fetch('/api/bewertungen', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sterne: selectedStar, text, name, website_url: hp })
+      });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(data.error || 'Die Bewertung konnte nicht gesendet werden.');
+
+      show('Danke. Deine Bewertung wird geprüft und dann veröffentlicht.', true);
+      document.getElementById('review-text').value = '';
+      document.getElementById('review-name').value = '';
+      selectedStar = 0;
+      document.querySelectorAll('#star-picker button').forEach(b => b.classList.remove('active'));
+      setTimeout(closeModal, 2200);
+    } catch(e) {
+      show((e.message || 'Die Bewertung konnte nicht gesendet werden.') + ' Alternativ: kontakt@fulfillbridge.de', false);
+    }
+
+    btn.disabled = false;
+    btn.textContent = 'Bewertung absenden';
+  });
+
+  loadReviews();
+})();
+</script>
+</body>
+</html>

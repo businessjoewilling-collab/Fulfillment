@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Startseite -->
+  <url>
+    <loc>https://fulfillbridge.de/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Bewertungen -->
+  <url>
+    <loc>https://fulfillbridge.de/bewertungen</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Blogartikel -->
+  <url>
+    <loc>https://fulfillbridge.de/blog/3pl-finden-deutschland</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Impressum -->
+  <url>
+    <loc>https://fulfillbridge.de/impressum</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <!-- Datenschutz -->
+  <url>
+    <loc>https://fulfillbridge.de/datenschutz</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <!--
+    Hinweis: /anfrage und /3pl-bewerben stehen bewusst NICHT in der Sitemap.
+    Beide Seiten sind auf noindex gesetzt (reine Conversion-Seiten).
+    Neue Nischenseiten hier ergaenzen, sobald sie live sind:
+    /fulfillment/schweiz, /fulfillment/kuehlkette usw.
+  -->
+
+</urlset>
