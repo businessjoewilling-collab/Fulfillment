@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Als Lagerbetrieb bewerben – Fulfillbridge</title>
+<meta name="description" content="Bewirb dich als Fulfillment-Anbieter bei Fulfillbridge und erhalte passende D2C-Anfragen aus dem DACH-Raum. Kostenlos und ohne Provision." />
+<link rel="canonical" href="https://fulfillbridge.de/3pl-bewerben" />
+<meta name="robots" content="noindex, follow" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<meta name="theme-color" content="#2C1E16" />
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+<link rel="stylesheet" href="/fonts/fonts.css" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap inner">
+    <a href="/" class="brand">
+      <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-linecap="round">
+          <path d="M14 7v27" stroke-width="5"/>
+          <path d="M14 11.5 26 32M14 11.5 34 32M14 11.5 42 32" stroke-width="3"/>
+          <path d="M5 35h38" stroke-width="6"/>
+        </g>
+      </svg>
+      <span class="brand-word">Fulfill<i>bridge</i></span>
+    </a>
+    <a href="/" class="back-link">
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Zurück zur Startseite
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap form-page">
+
+    <div>
+      <h1>Anfragen, die <span>wirklich passen.</span></h1>
+      <p class="lede soft">Du betreibst Fulfillment in Deutschland, Österreich oder der Schweiz? Ich nehme nur Anbieter auf, deren Profil, Kapazitäten und Prozesse klar dokumentiert sind. Keine Massen-Leads.</p>
+
+      <div class="claim">
+        <b>Kostenlos und ohne Provision</b>
+        <span>Die Aufnahme ins Netzwerk kostet dich nichts, und ich berechne keine Provision auf vermittelte Kunden. Bezahlt werde ich ausschließlich vom Shop. Das ist die Grundlage dafür, dass meine Empfehlungen neutral sind.</span>
+      </div>
+
+      <ul class="plainlist">
+        <li>Gefilterte Anfragen nach Volumen und Produktprofil</li>
+        <li>Klarer geografischer Fokus auf DACH</li>
+        <li>Kein Massen-Outreach, nur echter Fit</li>
+        <li>Transparente Prozesse auf beiden Seiten</li>
+      </ul>
+    </div>
+
+    <div class="form-card">
+      <h2>Deine Bewerbung</h2>
+      <p class="form-hint">Alle mit * markierten Felder sind Pflichtfelder.</p>
+
+      <form id="3pl-form" novalidate>
+        <div class="fgrid">
+          <div class="fg">
+            <label for="firma">Firmenname *</label>
+            <input type="text" id="firma" placeholder="Muster Logistics GmbH" autocomplete="organization" required />
+          </div>
+          <div class="fg">
+            <label for="website">Website *</label>
+            <input type="url" id="website" placeholder="https://euerlager.de" autocomplete="url" required />
+          </div>
+          <div class="fg">
+            <label for="ansprechpartner">Ansprechpartner *</label>
+            <input type="text" id="ansprechpartner" placeholder="Max Mustermann" autocomplete="name" required />
+          </div>
+          <div class="fg">
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" placeholder="max@euerlager.de" autocomplete="email" required />
+          </div>
+          <div class="fg">
+            <label for="standorte">Standorte</label>
+            <input type="text" id="standorte" placeholder="z.B. Hamburg, Wien" />
+          </div>
+          <div class="fg">
+            <label for="ch-fit">Schweiz-Abdeckung</label>
+            <select id="ch-fit">
+              <option value="">Bitte wählen</option>
+              <option>Nein</option>
+              <option>Ja, über Partner</option>
+              <option>Ja, inhouse</option>
+            </select>
+          </div>
+          <div class="fg">
+            <label for="min-orders">Sinnvoll ab (Orders/Monat)</label>
+            <input type="text" id="min-orders" placeholder="z.B. 500" inputmode="numeric" />
+          </div>
+          <div class="fg">
+            <label for="max-orders">Sinnvoll bis (Orders/Monat)</label>
+            <input type="text" id="max-orders" placeholder="z.B. 20.000" inputmode="numeric" />
+          </div>
+          <div class="fg full">
+            <label for="integrationen">Anbindungen</label>
+            <input type="text" id="integrationen" placeholder="z.B. Shopify, Shopware, WooCommerce, JTL" />
+          </div>
+          <div class="fg full">
+            <label for="spezialisierung">Spezialisierung und Besonderheiten</label>
+            <input type="text" id="spezialisierung" placeholder="z.B. Kühllagerung, Fashion, Sperrgut" />
+          </div>
+        </div>
+
+        <div class="hp" aria-hidden="true">
+          <label for="website_url">Bitte leer lassen</label>
+          <input type="text" id="website_url" tabindex="-1" autocomplete="off" />
+        </div>
+
+        <button type="submit" class="btn btn-dark" id="3pl-btn" style="width:100%;margin-top:22px;">Bewerbung senden</button>
+        <div class="form-msg" id="3pl-msg" role="status" aria-live="polite"></div>
+        <p class="privacy-note">
+          Mit dem Absenden stimmst du zu, dass ich deine Angaben zur Prüfung deiner Bewerbung
+          verarbeite. Details in der <a href="/datenschutz">Datenschutzerklärung</a>.
+        </p>
+      </form>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <div class="foot-meta">
+      Fulfillbridge — Vermittlung von Fulfillment-Partnern in DACH<br />
+      <a href="mailto:joewilling@fulfillbridge.de">joewilling@fulfillbridge.de</a>
+    </div>
+    <div class="foot-links">
+      <a href="/">Startseite</a>
+      <a href="/anfrage">Anfrage</a>
+      <a href="/bewertungen">Bewertungen</a>
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="https://www.linkedin.com/in/fulfillbridge-dach-8832b03a8/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const form = document.getElementById('3pl-form');
+  const btn  = document.getElementById('3pl-btn');
+  const msg  = document.getElementById('3pl-msg');
+  const val  = id => (document.getElementById(id)?.value || '').trim();
+
+  function show(text, ok){
+    msg.className = 'form-msg ' + (ok ? 'ok' : 'bad');
+    msg.textContent = text;
+  }
+
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    if(!val('firma') || !val('website') || !val('ansprechpartner') || !val('email')){
+      show('Bitte alle Pflichtfelder ausfüllen.', false); return;
+    }
+
+    btn.disabled = true; btn.textContent = 'Wird gesendet…'; msg.className = 'form-msg';
+
+    try{
+      const r = await fetch('/api/bewerbung', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({
+          firma:           val('firma'),
+          website:         val('website'),
+          ansprechpartner: val('ansprechpartner'),
+          email:           val('email'),
+          standorte:       val('standorte'),
+          chFit:           val('ch-fit'),
+          minOrders:       val('min-orders'),
+          maxOrders:       val('max-orders'),
+          integrationen:   val('integrationen'),
+          spezialisierung: val('spezialisierung'),
+          website_url:     val('website_url')
+        })
+      });
+      const data = await r.json().catch(() => ({}));
+      if(!r.ok) throw new Error(data.error || 'Die Bewerbung konnte nicht gesendet werden.');
+      show('Bewerbung erhalten. Ich melde mich bei dir.', true);
+      form.reset();
+    }catch(err){
+      show((err.message || 'Die Bewerbung konnte nicht gesendet werden.') + ' Alternativ: joewilling@fulfillbridge.de', false);
+    }
+
+    btn.disabled = false; btn.textContent = 'Bewerbung senden';
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+/* ===========================================================
+   Lokal eingebundene Schriften – es gehen keine Daten an Google.
+
+   Benötigte Dateien in diesem Ordner (/fonts/):
+     bricolage-600.woff2
+     bricolage-700.woff2
+     bricolage-800.woff2
+     figtree-400.woff2
+     figtree-500.woff2
+     figtree-600.woff2
+
+   Bezug: gwfh.mranftl.com – Schrift wählen, Charset "latin",
+   die oben genannten Gewichte, herunterladen, entpacken und
+   exakt auf diese Namen umbenennen.
+   =========================================================== */
+
+/* ---------- Bricolage Grotesque (Überschriften) ---------- */
+@font-face{
+  font-family:'Bricolage Grotesque';
+  font-style:normal; font-weight:600; font-display:swap;
+  src:url('/fonts/bricolage-600.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Bricolage Grotesque';
+  font-style:normal; font-weight:700; font-display:swap;
+  src:url('/fonts/bricolage-700.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Bricolage Grotesque';
+  font-style:normal; font-weight:800; font-display:swap;
+  src:url('/fonts/bricolage-800.woff2') format('woff2');
+}
+
+/* ---------- Figtree (Fließtext) ---------- */
+@font-face{
+  font-family:'Figtree';
+  font-style:normal; font-weight:400; font-display:swap;
+  src:url('/fonts/figtree-400.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Figtree';
+  font-style:normal; font-weight:500; font-display:swap;
+  src:url('/fonts/figtree-500.woff2') format('woff2');
+}
+@font-face{
+  font-family:'Figtree';
+  font-style:normal; font-weight:600; font-display:swap;
+  src:url('/fonts/figtree-600.woff2') format('woff2');
+}

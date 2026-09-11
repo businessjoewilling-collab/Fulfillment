@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<title>OG-Bild erzeugen</title>
+<!-- Diese Datei bleibt lokal. Nicht ins Repo hochladen. -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:#4a4a4a;font-family:'Figtree',sans-serif;padding:40px;}
+  .hint{max-width:1200px;margin:0 auto 28px;color:#fff;font-size:15px;line-height:1.7;
+    background:rgba(0,0,0,0.35);padding:18px 22px;border-radius:10px;}
+  .hint b{display:block;font-size:17px;margin-bottom:6px;}
+  .hint code{background:rgba(255,255,255,0.15);padding:2px 6px;border-radius:4px;}
+
+  /* Genau das Format, das LinkedIn und WhatsApp erwarten */
+  #og{
+    width:1200px;height:630px;background:#2C1E16;color:#FBF6EE;
+    display:flex;flex-direction:column;justify-content:space-between;
+    padding:74px 80px;margin:0 auto;position:relative;overflow:hidden;
+  }
+  .top{display:flex;align-items:center;gap:18px;}
+  .top svg{color:#7CC1E0;}
+  .brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
+    font-size:38px;letter-spacing:-0.04em;line-height:1;}
+  .brand i{font-style:normal;color:#7CC1E0;}
+
+  h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;
+    font-size:86px;line-height:0.98;letter-spacing:-0.04em;max-width:16ch;}
+  h1 span{color:#7CC1E0;}
+
+  .bottom{display:flex;align-items:center;justify-content:space-between;gap:30px;}
+  .claim{font-size:26px;color:#CBB29A;line-height:1.35;}
+  .claim b{color:#FBF6EE;font-weight:600;}
+  .pill{background:#7CC1E0;color:#1D1712;font-family:'Bricolage Grotesque',sans-serif;
+    font-weight:700;font-size:26px;letter-spacing:-0.02em;padding:16px 30px;
+    border-radius:100px;white-space:nowrap;}
+</style>
+</head>
+<body>
+
+<div class="hint">
+  <b>So machst du daraus die Datei og-image.png</b>
+  1. Diese Seite in Chrome öffnen, Zoom auf 100 % (Strg+0 bzw. Cmd+0).<br />
+  2. Rechtsklick auf den braunen Kasten unten → <code>Untersuchen</code>.<br />
+  3. Im Code-Fenster ist das Element <code>&lt;div id="og"&gt;</code> markiert. Rechtsklick darauf →
+     <code>Capture node screenshot</code>.<br />
+  4. Die heruntergeladene Datei in <code>og-image.png</code> umbenennen und ins Repo-Root legen,
+     neben die <code>index.html</code>.<br />
+  5. Danach den LinkedIn Post Inspector einmal über fulfillbridge.de laufen lassen, damit der
+     alte Zwischenspeicher gelöscht wird.
+</div>
+
+<div id="og">
+  <div class="top">
+    <svg width="60" height="60" viewBox="0 0 48 48" aria-hidden="true">
+      <g fill="none" stroke="currentColor" stroke-linecap="round">
+        <path d="M14 7v27" stroke-width="5"/>
+        <path d="M14 11.5 26 32M14 11.5 34 32M14 11.5 42 32" stroke-width="3"/>
+        <path d="M5 35h38" stroke-width="6"/>
+      </g>
+    </svg>
+    <div class="brand">Fulfill<i>bridge</i></div>
+  </div>
+
+  <h1>24 Lager im DACH-Raum.<br /><span>Eins passt zu dir.</span></h1>
+
+  <div class="bottom">
+    <div class="claim">
+      In 72 Stunden weißt du, welches.<br />
+      <b>Kein Anbieter zahlt mir Provision.</b>
+    </div>
+    <div class="pill">299 € nur bei Erfolg</div>
+  </div>
+</div>
+
+</body>
+</html>

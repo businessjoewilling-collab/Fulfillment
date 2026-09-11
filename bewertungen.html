@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bewertungen – Fulfillbridge</title>
+<meta name="description" content="Geprüfte Bewertungen von Shops, die über Fulfillbridge einen Fulfillment-Partner gefunden haben." />
+<link rel="canonical" href="https://fulfillbridge.de/bewertungen" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<meta name="theme-color" content="#2C1E16" />
+<script defer src="/_vercel/insights/script.js"></script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+<link rel="stylesheet" href="/fonts/fonts.css" />
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap inner">
+    <a href="/" class="brand">
+      <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-linecap="round">
+          <path d="M14 7v27" stroke-width="5"/>
+          <path d="M14 11.5 26 32M14 11.5 34 32M14 11.5 42 32" stroke-width="3"/>
+          <path d="M5 35h38" stroke-width="6"/>
+        </g>
+      </svg>
+      <span class="brand-word">Fulfill<i>bridge</i></span>
+    </a>
+    <a href="/" class="back-link">
+      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Zurück zur Startseite
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="wrap rev-page">
+    <h1>Was Shops über die Zusammenarbeit sagen</h1>
+
+    <p class="verify-note">
+      Ich veröffentliche ausschließlich Bewertungen von Shops, die ich tatsächlich an einen
+      Fulfillment-Partner vermittelt habe. Jede Bewertung wird vor der Veröffentlichung manuell
+      geprüft. Bewertungen werden weder gekauft noch für ihre Abgabe vergütet.
+    </p>
+
+    <div class="rev-summary">
+      <div class="rev-avg" id="avg">—</div>
+      <div>
+        <div class="reviews-stars" id="avg-stars" style="color:var(--accent-ink);"></div>
+        <div class="soft" style="font-size:0.9rem;" id="count">Bewertungen werden geladen…</div>
+      </div>
+      <button class="btn btn-outline-dark btn-sm" id="open" style="margin-left:auto;">Bewertung abgeben</button>
+    </div>
+
+    <div class="rev-grid" id="grid">
+      <div class="rev-empty">Bewertungen werden geladen…</div>
+    </div>
+  </div>
+</main>
+
+<div class="overlay" id="modal" role="dialog" aria-modal="true" aria-labelledby="mh">
+  <div class="modal">
+    <button class="modal-close" id="close" aria-label="Schließen">✕</button>
+    <h2 id="mh">Deine Bewertung</h2>
+    <p class="soft" style="font-size:0.94rem;">Wie war deine Erfahrung? Deine Bewertung wird geprüft, bevor sie erscheint.</p>
+
+    <div class="star-picker" id="stars" role="group" aria-label="Sternebewertung">
+      <button type="button" data-v="1" aria-label="1 Stern">★</button>
+      <button type="button" data-v="2" aria-label="2 Sterne">★</button>
+      <button type="button" data-v="3" aria-label="3 Sterne">★</button>
+      <button type="button" data-v="4" aria-label="4 Sterne">★</button>
+      <button type="button" data-v="5" aria-label="5 Sterne">★</button>
+    </div>
+
+    <div class="fg" style="margin-bottom:16px;">
+      <label for="rname">Dein Name (optional)</label>
+      <input type="text" id="rname" placeholder="z.B. Max M." />
+    </div>
+    <div class="fg">
+      <label for="rtext">Deine Erfahrung</label>
+      <textarea id="rtext" placeholder="Was hat gut geklappt? Was hat dir geholfen?"></textarea>
+    </div>
+
+    <div class="hp" aria-hidden="true">
+      <label for="website_url">Bitte leer lassen</label>
+      <input type="text" id="website_url" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <button class="btn btn-dark" id="send" style="width:100%;margin-top:20px;">Bewertung absenden</button>
+    <div class="form-msg" id="msg" role="status" aria-live="polite"></div>
+    <p class="privacy-note">
+      Mit dem Absenden stimmst du zu, dass ich deine Angaben zur Prüfung und Veröffentlichung
+      verarbeite. Details in der <a href="/datenschutz">Datenschutzerklärung</a>.
+    </p>
+  </div>
+</div>
+
+<footer class="site-foot">
+  <div class="wrap foot">
+    <div class="foot-meta">
+      Fulfillbridge — Vermittlung von Fulfillment-Partnern in DACH<br />
+      <a href="mailto:joewilling@fulfillbridge.de">joewilling@fulfillbridge.de</a>
+    </div>
+    <div class="foot-links">
+      <a href="/">Startseite</a>
+      <a href="/anfrage">Anfrage</a>
+      <a href="/3pl-bewerben">Für Lagerbetriebe</a>
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="https://www.linkedin.com/in/fulfillbridge-dach-8832b03a8/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const modal = document.getElementById('modal');
+  const grid  = document.getElementById('grid');
+  const msg   = document.getElementById('msg');
+  const send  = document.getElementById('send');
+  let picked = 0;
+
+  const stars = n => '★'.repeat(n) + '☆'.repeat(5 - n);
+  const open  = () => { modal.classList.add('open'); document.body.style.overflow='hidden'; };
+  const close = () => { modal.classList.remove('open'); document.body.style.overflow=''; };
+
+  document.getElementById('open').addEventListener('click', open);
+  document.getElementById('close').addEventListener('click', close);
+  modal.addEventListener('click', e => { if(e.target === modal) close(); });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape' && modal.classList.contains('open')) close(); });
+
+  document.querySelectorAll('#stars button').forEach(b => {
+    b.addEventListener('click', () => {
+      picked = parseInt(b.dataset.v, 10);
+      document.querySelectorAll('#stars button').forEach(x =>
+        x.classList.toggle('on', parseInt(x.dataset.v,10) <= picked));
+    });
+  });
+
+  // Aufbau per DOM-API statt innerHTML – kein XSS über Bewertungstexte möglich.
+  function card(r){
+    const d = document.createElement('div'); d.className = 'rev-card';
+    const s = document.createElement('div'); s.className = 'review-stars';
+    s.style.color = 'var(--accent-ink)'; s.textContent = stars(r.sterne);
+    const t = document.createElement('div'); t.className = 'soft';
+    t.style.fontSize = '0.98rem'; t.style.flex = '1'; t.textContent = r.text;
+    const m = document.createElement('div'); m.className = 'soft'; m.style.fontSize = '0.85rem';
+    const dt = r.datum ? new Date(r.datum).toLocaleDateString('de-DE',{month:'short',year:'numeric'}) : '';
+    m.textContent = r.name + (dt ? ' · ' + dt : '');
+    d.append(s,t,m); return d;
+  }
+
+  function empty(text){
+    grid.textContent = '';
+    const e = document.createElement('div'); e.className = 'rev-empty'; e.textContent = text;
+    grid.appendChild(e);
+  }
+
+  async function load(){
+    try{
+      const r = await fetch('/api/bewertungen');
+      if(!r.ok) throw new Error();
+      const list = (await r.json()).reviews || [];
+
+      if(!list.length){
+        empty('Hier erscheinen die Bewertungen der Shops, die ich vermittelt habe, sobald sie geprüft sind.');
+        document.getElementById('avg').textContent = '—';
+        document.getElementById('avg-stars').textContent = '';
+        document.getElementById('count').textContent = '';
+        return;
+      }
+
+      const mean = (list.reduce((s,x)=>s+x.sterne,0)/list.length).toFixed(1);
+      document.getElementById('avg').textContent = mean;
+      document.getElementById('avg-stars').textContent = stars(Math.round(parseFloat(mean)));
+      document.getElementById('count').textContent =
+        list.length + ' geprüfte Bewertung' + (list.length!==1 ? 'en' : '');
+
+      grid.textContent = '';
+      list.forEach(x => grid.appendChild(card(x)));
+    }catch(e){
+      empty('Die Bewertungen konnten gerade nicht geladen werden. Lade die Seite neu oder versuch es später noch einmal.');
+      document.getElementById('count').textContent = '';
+    }
+  }
+
+  send.addEventListener('click', async function(){
+    const text = document.getElementById('rtext').value.trim();
+    const name = document.getElementById('rname').value.trim();
+    const hp   = document.getElementById('website_url').value.trim();
+
+    function show(t, ok){ msg.className = 'form-msg ' + (ok ? 'ok' : 'bad'); msg.textContent = t; }
+
+    if(!picked){ show('Wähle zuerst eine Sternebewertung.', false); return; }
+    if(text.length < 10){ show('Schreib bitte kurz etwas zu deiner Erfahrung.', false); return; }
+
+    send.disabled = true; send.textContent = 'Wird gesendet…'; msg.className = 'form-msg';
+
+    try{
+      const r = await fetch('/api/bewertungen', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ sterne: picked, text, name, website_url: hp })
+      });
+      const data = await r.json().catch(() => ({}));
+      if(!r.ok) throw new Error(data.error || 'Die Bewertung konnte nicht gesendet werden.');
+
+      show('Danke. Deine Bewertung wird geprüft und dann veröffentlicht.', true);
+      document.getElementById('rtext').value = '';
+      document.getElementById('rname').value = '';
+      picked = 0;
+      document.querySelectorAll('#stars button').forEach(b => b.classList.remove('on'));
+      setTimeout(close, 2200);
+    }catch(e){
+      show((e.message || 'Die Bewertung konnte nicht gesendet werden.') + ' Alternativ: joewilling@fulfillbridge.de', false);
+    }
+
+    send.disabled = false; send.textContent = 'Bewertung absenden';
+  });
+
+  load();
+})();
+</script>
+</body>
+</html>
